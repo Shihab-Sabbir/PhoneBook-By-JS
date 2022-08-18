@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section>
+    <section class="phonebook-container">
 
         <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
             <div class="container flex flex-wrap justify-between items-center mx-auto">
@@ -36,7 +36,7 @@
                         </div>
                         <input type="text" id="search-navbar"
                             class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Search..." onkeyup="search()">
+                            placeholder="Search...">
                     </div>
                     <div class="sm:w-1/2">
                         <ul
@@ -51,9 +51,9 @@
             </div>
         </nav>
         <main>
-            <div class="container parentClass  mx-auto" id="addLocation">
-                <div class="flex items-center justify-center p-5 border-2 m-5 rounded-xl shadow-md phoneBookItem">
-                    <p class="font-bold uppercase">Contracts</p>
+            <div class="container parentClass" id="addLocation">
+                <div class='flex items-center justify-center'>
+                    <p class="font-bold uppercase hidden" id="contact-header">Contact List</p>
                 </div>
             </div>
         </main>
@@ -61,22 +61,27 @@
         <div id="input" class="hidden">
             <div class="flex flex-col items-center justify-center">
 
-                <input type="text" class="sm:w-80 w-54 border-2 border-gray-400 focus:border-blue-400 h-12 p-5 mt-5"
+                <input type="text" class="sm:w-80 w-54 border-2 border-gray-400  focus:border-blue-400 h-12 p-5 mt-5"
                     placeholder="Name" id="nameInput">
-                <input type="text" class="sm:w-80 w-54 border-2 border-gray-400 focus:border-blue-400 h-12 p-5 mt-5"
+                <input type="text" class="sm:w-80 w-54 border-2 border-gray-400  focus:border-blue-400 h-12 p-5 mt-5"
                     placeholder="Email" id="emailInput">
-                <input type="text" class="sm:w-80 w-54 border-2 border-gray-400 focus:border-blue-400 h-12 p-5 mt-5"
+                <input type="text" class="sm:w-80 w-54 border-2 border-gray-400  focus:border-blue-400 h-12 p-5 mt-5"
                     placeholder="Number" id="numberInput">
                 <button class="bg-lime-400 p-1 px-2 rounded-md text-sm font-bold text-white  border h-12 w-24 mt-5"
-                    id="save" onclick="save()">Save</button>
+                    id="save">Save</button>
 
             </div>
         </div>
-        <div id="search-result">
-
-        </div>
+        <main>
+            <div class="hidden container" id="search-result">
+                <div class='flex items-center justify-center'>
+                    <p class="font-bold uppercase">Search Result</p>
+                </div>
+            </div>
+        </main>
     </section>
-    <script type="text/javascript" src="phonebook.js"></script>
+    <!-- <script type="text/javascript" src="phonebook.js"></script> -->
+    <script src="newSystem.js"></script>
 </body>
 
 </html>
